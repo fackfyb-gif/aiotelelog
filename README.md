@@ -1,5 +1,6 @@
 <p align="right">
-  <a href="README.fa.md">نسخه فارسی README</a> ·
+  <a href="README.fa.md">نسخه فارسی README</a> 
+  <br>
   <a href="README.ru.md">Русский README</a>
 </p>
 
