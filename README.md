@@ -1,5 +1,6 @@
 <p align="right">
-  <a href="README.fa.md">نسخه فارسی README</a>
+  <a href="README.fa.md">نسخه فارسی README</a> ·
+  <a href="README.ru.md">Русский README</a>
 </p>
 
 <p align="center">
@@ -215,6 +216,7 @@ required.
 - [Complete English API documentation](docs/API.en.md)
 - [مستندات کامل فارسی](docs/API.fa.md)
 - [Persian README](README.fa.md)
+- [Русский README](README.ru.md)
 - [Library development plan](docs/PYTHON_LIBRARY_PLAN.md)
 
 ## Git and releases

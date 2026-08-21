@@ -1,5 +1,6 @@
 <p dir="rtl" align="right">
-  <a href="README.md">English README</a>
+  <a href="README.md">English README</a> ·
+  <a href="README.ru.md">Русский README</a>
 </p>
 
 <p align="center">
@@ -206,6 +207,7 @@ python -m build
 - [مستندات کامل API فارسی](docs/API.fa.md)
 - [Complete English API documentation](docs/API.en.md)
 - [English README](README.md)
+- [Русский README](README.ru.md)
 - [پلن توسعه کتابخانه](docs/PYTHON_LIBRARY_PLAN.md)
 
 ## Git و انتشار
