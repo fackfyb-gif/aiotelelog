@@ -1,5 +1,6 @@
 <p dir="rtl" align="right">
-  <a href="README.md">English README</a> ·
+  <a href="README.md">English README</a> 
+    <br>
   <a href="README.ru.md">Русский README</a>
 </p>
 
