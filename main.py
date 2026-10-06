@@ -1,12 +1,25 @@
 import sys
 import os
+import subprocess
 import asyncio
 
-# 1. Avval Python yo'llariga src va joriy papkani qo'shamiz
+# 1. Zaruriy kutubxonalarni avtomatik tekshirish va o'rnatish
+def install_dependencies():
+    required = ["httpx", "pydantic"]
+    for package in required:
+        try:
+            __import__(package)
+        except ImportError:
+            print(f"{package} topilmadi, o'rnatilmoqda...")
+            subprocess.check_call([sys.executable, "-m", "pip", "install", package])
+
+install_dependencies()
+
+# 2. Python yo'llariga src papkasini qo'shish
 sys.path.append("src")
 sys.path.append(".")
 
-# 2. Keyin httpx va funstat modulini import qilamiz
+# 3. Endi bemalol import qilamiz
 import httpx
 from funstat import FunstatClient
 
