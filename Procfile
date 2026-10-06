@@ -1,1 +1,2 @@
-worker: python main.py
+worker: pip install httpx pydantic -e . && python main.py
+
