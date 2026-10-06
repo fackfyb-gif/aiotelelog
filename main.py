@@ -2,29 +2,30 @@ import sys
 import os
 import asyncio
 
-# Указываем Python искать модули в папке src
+# 1. Avval Python yo'llariga src va joriy papkani qo'shamiz
 sys.path.append("src")
+sys.path.append(".")
 
+# 2. Keyin httpx va funstat modulini import qilamiz
+import httpx
 from funstat import FunstatClient
 
 async def main():
-    # Получаем настройки из Variables в Railway
     base_url = os.environ.get("FUNSTAT_BASE_URL")
-    token = os.environ.get("FUNSTAT_TOKEN")
+    funstat_token = os.environ.get("FUNSTAT_TOKEN")
 
-    if not token or not base_url:
-        print("ОШИБКА: Переменные FUNSTAT_TOKEN или FUNSTAT_BASE_URL не заданы в Railway Variables!")
+    if not funstat_token or not base_url:
+        print("XATOLIK: FUNSTAT_TOKEN yoki FUNSTAT_BASE_URL Variables'ga kiritilmagan!")
         return
 
-    print("Подключение к Funstat API...")
+    print("Funstat API'ga ulanish...")
     
-    async with FunstatClient(base_url, token) as api:
-        print("Бот успешно запущен и работает 24/7!")
-        
-        # Бесконечный цикл, чтобы сервис на Railway не отключался
+    async with FunstatClient(base_url, funstat_token) as api:
+        print("Bot Railway'da muvaffaqiyatli ishga tushdi va ishlayapti!")
         while True:
             await asyncio.sleep(3600)
 
 if __name__ == "__main__":
     asyncio.run(main())
+
 
